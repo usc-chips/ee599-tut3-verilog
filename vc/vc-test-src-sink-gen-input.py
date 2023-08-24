@@ -19,8 +19,8 @@ def print_dataset( in_list, out_list ):
 
   for i in xrange(size):
 
-    print "`SRC_MEM[{:0>2}] = 8'h{:0>2x}; `SINK_MEM[{:0>2}] = 8'h{:0>2x};" \
-      .format( i, in_list[i], i, out_list[i] )
+    print( "`SRC_MEM[{:0>2}] = 8'h{:0>2x}; `SINK_MEM[{:0>2}] = 8'h{:0>2x};" \
+      .format( i, in_list[i], i, out_list[i] ) )
 
 #-------------------------------------------------------------------------
 # Global setup

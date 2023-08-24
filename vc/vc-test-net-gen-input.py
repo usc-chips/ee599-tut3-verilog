@@ -52,7 +52,7 @@ def print_dataset( src, dest, opaque, payload ):
 
   for i in xrange(size):
 
-    print dataset_template.format( src[i], dest[i], opaque[i], payload[i] )
+    print( dataset_template.format( src[i], dest[i], opaque[i], payload[i] ) )
 
 #-------------------------------------------------------------------------
 # uniform random dataset

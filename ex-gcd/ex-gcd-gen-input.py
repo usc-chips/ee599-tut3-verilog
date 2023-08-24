@@ -19,8 +19,8 @@ def print_dataset( in0, in1, out ):
 
   for i in xrange(len(in0)):
 
-    print "init( {:0>2}, 16'h{:0>4x}, 16'h{:0>4x}, 16'h{:0>4x} );" \
-      .format( i, in0[i], in1[i], out[i] )
+    print( "init( {:0>2}, 16'h{:0>4x}, 16'h{:0>4x}, 16'h{:0>4x} );" \
+      .format( i, in0[i], in1[i], out[i] ) )
 
 #-------------------------------------------------------------------------
 # Random dataset
@@ -29,7 +29,7 @@ def print_dataset( in0, in1, out ):
 if sys.argv[1] == "random-a":
 
   size = 25
-  print "num_inputs =", size, ";"
+  print( "num_inputs =", size, ";" )
 
   in0 = []
   in1 = []
@@ -54,7 +54,7 @@ if sys.argv[1] == "random-a":
 elif sys.argv[1] == "random-b":
 
   size = 25
-  print "num_inputs =", size, ";"
+  print( "num_inputs =", size, ";" )
 
   in0 = []
   in1 = []

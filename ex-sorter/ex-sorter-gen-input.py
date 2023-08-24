@@ -25,7 +25,7 @@ def print_dataset( in_, out ):
 
   # Print number of inputs
 
-  print "num_inputs =", size, ";"
+  print( "num_inputs =", size, ";" )
 
   # Print data set
 
@@ -34,17 +34,17 @@ def print_dataset( in_, out ):
     # Handle initial few cycles while waiting for pipeline to fill
 
     if i < latency:
-      print "t1( 1,", mkstr(in_[i]), ", 0, 8'h??, 8'h??, 8'h??, 8'h?? );"
+      print( "t1( 1,", mkstr(in_[i]), ", 0, 8'h??, 8'h??, 8'h??, 8'h?? );" )
 
     # Handle final few cycles while waiting for pipeline to drain
 
     elif i >= size:
-      print "t1( 0, 8'hxx, 8'hxx, 8'hxx, 8'hxx , 1,", mkstr(out[i-3]), ");"
+      print( "t1( 0, 8'hxx, 8'hxx, 8'hxx, 8'hxx , 1,", mkstr(out[i-3]), ");" )
 
     # Handle main cycles when pipeline is full and not draining
 
     else:
-      print "t1( 1,", mkstr(in_[i]), ", 1,", mkstr(out[i-3]), ");"
+      print( "t1( 1,", mkstr(in_[i]), ", 1,", mkstr(out[i-3]), ");" )
 
 #-------------------------------------------------------------------------
 # Random dataset
