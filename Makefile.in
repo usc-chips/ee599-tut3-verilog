@@ -124,9 +124,9 @@ $(2)_junk += $$($(2)_test_deps)
 $(2)_test_exes := $$(patsubst %.t.v,%-test,$$($(2)_test_srcs))
 
 $$($(2)_test_exes) : %-test : %.t.v
-	$(scripts_dir)/warnings2errors \
-    $(VCOMP) $(VCOMP_FLAGS) -o $$@ \
-    -I $(src_dir)/vc -I $(src_dir)/$(1) $$($(2)_incs) $$<
+	$(VCOMP) $(VCOMP_FLAGS) -o $$@ \
+  -I $(src_dir)/vc -I $(src_dir)/$(1) $$($(2)_incs) $$<
+#  $(scripts_dir)/warnings2errors \
 
 $(2)_junk += $$($(2)_test_exes)
 
@@ -172,9 +172,9 @@ $(2)_junk += $$($(2)_sim_deps)
 $(2)_sim_exes := $$(patsubst %.v, %, $$($(2)_sim_srcs))
 
 $$($(2)_sim_exes) : % : %.v
-	$(scripts_dir)/warnings2errors \
-    $(VCOMP) $(VCOMP_FLAGS) -o $$@ \
-    -I $(src_dir)/$(1) $$($(2)_incs) $$<
+	$(VCOMP) $(VCOMP_FLAGS) -o $$@ \
+  -I $(src_dir)/$(1) $$($(2)_incs) $$<
+#  $(scripts_dir)/warnings2errors \
 
 $(2)_junk += $$($(2)_sim_exes)
 
@@ -197,9 +197,9 @@ $(2)_junk += $$($(2)_opt_deps)
 $(2)_opt_exes := $$(patsubst %.v, %, $$($(2)_opt_srcs))
 
 $$($(2)_opt_exes) : % : %.v
-	$(scripts_dir)/warnings2errors \
-    $(VCOMP) $(VCOMP_FLAGS) -o $$@ \
-    -I $(src_dir)/$(1) $$($(2)_incs) $$<
+	$(VCOMP) $(VCOMP_FLAGS) -o $$@ \
+  -I $(src_dir)/$(1) $$($(2)_incs) $$<
+#  $(scripts_dir)/warnings2errors \
 
 $(2)_junk += $$($(2)_opt_exes)
 

@@ -29,7 +29,7 @@ def print_dataset( in_, out ):
 
   # Print data set
 
-  for i in xrange(size+latency):
+  for i in range(size+latency):
 
     # Handle initial few cycles while waiting for pipeline to fill
 
@@ -55,9 +55,9 @@ if sys.argv[1] == "random":
   in_ = []
   out = []
 
-  for i in xrange(100):
+  for i in range(100):
 
-    data = [ random.randint(0,0xff) for i in xrange(4) ]
+    data = [ random.randint(0,0xff) for i in range(4) ]
     in_.append( data         )
     out.append( sorted(data) )
 
@@ -72,9 +72,9 @@ elif sys.argv[1] == "sorted-fwd":
   in_ = []
   out = []
 
-  for i in xrange(100):
+  for i in range(100):
 
-    data = [ random.randint(0,0xff) for i in xrange(4) ]
+    data = [ random.randint(0,0xff) for i in range(4) ]
     in_.append( sorted(data) )
     out.append( sorted(data) )
 
@@ -89,9 +89,9 @@ elif sys.argv[1] == "sorted-rev":
   in_ = []
   out = []
 
-  for i in xrange(100):
+  for i in range(100):
 
-    data = [ random.randint(0,0xff) for i in xrange(4) ]
+    data = [ random.randint(0,0xff) for i in range(4) ]
     in_.append( sorted(data)[::-1] )
     out.append( sorted(data)       )
 

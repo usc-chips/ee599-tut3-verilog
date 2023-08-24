@@ -16,4 +16,5 @@ subprojs = \
   ex-gcd \
   vc \
   ex-sorter \
+  ex-regincr \
 
