@@ -19,7 +19,7 @@ module vc_RandomNumGen
   input                    clk,
   input                    reset,
   input                    next,   // Generate next value
-  output [p_out_nbits-1:0] out     // Current random number
+  output reg [p_out_nbits-1:0] out     // Current random number
 );
 
   // State
@@ -45,7 +45,7 @@ module vc_RandomNumGen
 
   // We XOR higher order bits to create smaller output numbers
 
-  reg out;
+//  reg out;
 
   integer i;
   always @(*)

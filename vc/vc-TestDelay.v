@@ -25,12 +25,12 @@ module vc_TestDelay
   // Input interface
 
   input                    in_val,
-  output                   in_rdy,
+  output reg               in_rdy,
   input [p_msg_nbits-1:0]  in_msg,
 
   // Output interface
 
-  output                   out_val,
+  output reg               out_val,
   input                    out_rdy,
   output [p_msg_nbits-1:0] out_msg
 );
@@ -123,8 +123,8 @@ module vc_TestDelay
   // State output
   //----------------------------------------------------------------------
 
-  reg in_rdy;
-  reg out_val;
+//  reg in_rdy;
+//  reg out_val;
 
   always @(*) begin
 

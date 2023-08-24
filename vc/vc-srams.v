@@ -27,7 +27,7 @@ module vc_CombinationalSRAM_1rw
 
   input                      read_en,
   input  [c_addr_nbits-1:0]  read_addr,
-  output [p_data_nbits-1:0]  read_data,
+  output reg [p_data_nbits-1:0]  read_data,
 
   // Write port (sampled on the rising clock edge)
 
@@ -45,7 +45,7 @@ module vc_CombinationalSRAM_1rw
   // read data is all X's if the read is not enable at all to avoid
   // (potentially) incorrectly assuming the SRAM latches the read data.
 
-  reg read_data;
+//  reg read_data;
   always @(*) begin
     if ( read_en )
       read_data = mem[read_addr];
@@ -112,7 +112,7 @@ module vc_SynchronousSRAM_1rw
 
   input                     read_en,
   input  [c_addr_nbits-1:0] read_addr,
-  output [p_data_nbits-1:0] read_data,
+  output reg [p_data_nbits-1:0] read_data,
 
   // Write port (sampled on the rising clock edge)
 
@@ -130,7 +130,7 @@ module vc_SynchronousSRAM_1rw
   // read data is all X's if the read is not enable at all to avoid
   // (potentially) incorrectly assuming the SRAM latches the read data.
 
-  reg read_data;
+//  reg read_data;
   always @( posedge clk ) begin
     if ( read_en )
       read_data <= mem[read_addr];
