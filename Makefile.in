@@ -276,13 +276,13 @@ dist_junk += \
 
 tut3-verilog-harness :
 	$(scripts_dir)/gen-harness --verbose \
-    ece4750-tut3-verilog \
+    ee599-tut3-verilog \
     $(src_dir) \
     $(src_dir)/scripts/tutorial-gen-harness-cfg
 
 .PHONY: tut3-verilog-harness
 
-junk += ece4750-tut3-verilog ece4750-tut3-verilog.tar.gz
+junk += ee599-tut3-verilog ee599-tut3-verilog.tar.gz
 
 #-------------------------------------------------------------------------
 # Default
